@@ -7,10 +7,10 @@ function game(number = 5) {
 
     
     while (true) {
-        // enter  by player
+        // enter a choice  by player
         const playerSelection = prompt("Please Enter your choice:");
 
-        // select 
+        // choose a word randomly
         const computerSelection = computerPlay();
         result = playRound(playerSelection, computerSelection);
         console.log(result);
