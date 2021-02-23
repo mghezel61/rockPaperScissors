@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-</head> 
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Gridding</title>
+</head>
+
 <body>
-    <script src="app.js"></script>
+    <header>
+        <nav>
+            <h1>
+                "Rock Paper Scissors", REAL Battle!
+            </h1>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="headline">
+                <h1>
+                    When you win for 5 times, You are the "CHAMPION"
+                </h1>
+            </div>
+
+            <div class="players">
+                <div class="player">
+                    <h2>
+                        Player
+                    </h2>
+                </div>
+                <div class="computer">
+                    <h2>
+                        Computer
+                    </h2>
+                </div>
+            </div>
+            <div class="scores">
+                <div class="plr-score">
+                    <label>Score</label>
+                    <input id="player-score" value="0" disabled />
+                </div>
+                <div class="comp-score">
+                    <label>Score</label>
+                    <input id="computer-score" value="0" disabled />
+                </div>
+            </div>
+            <div class="play-game">
+                <div class="player-choices">
+                    <div class="rock">
+                        <button class="player-button"><span>Rock</span></button>
+                    </div>
+                    <div class="paper">
+                        <button class="player-button"><span>Paper</span></button>
+                    </div>
+                    <div class="scissors">
+                        <button class="player-button"><span>Scissors</span></button>
+                    </div>
+                </div>
+                <div class="player-choice">
+                   
+                    <div class="player-choice-input">
+                        <input type="text" value="??????" id="player" disabled>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="result-text">
+                        <p>
+                            Result
+                        </p>
+                    </div>
+                    <div class="result-input">
+                        <input type="text" value="??????" id="result" disabled>
+                    </div>
+                </div>
+                <div class="computer-choice">
+                    <div class="computer-choice-input">
+                        <input type="text" value="??????" id="computer" disabled>
+                    </div>
+                </div>
+                <div class="computer-choices">
+                    <div class="rock">
+                        <button class="computer-button rock" disabled><span>Rock</span></button>
+                    </div>
+                    <div class="paper">
+                        <button class="computer-button paper" disabled><span>Paper</span></button>
+                    </div>
+                    <div class="scissors">
+                        <button class="computer-button scissors" disabled><span>Scissors</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="final-result">
+                <div>
+                    <p class="f-r"> we are waiting for the final results!</p>
+                </div>
+                <div class="play-again">
+                    <button id="play-again">Play again</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <small>Designed by @mghezel</small>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
 </body>
+
 </html>
+
+
