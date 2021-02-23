@@ -272,3 +272,7 @@ footer div {
     margin: auto;
     margin: 0.5rem;
 }
+
+footer a {
+    text-decoration: none;
+}
