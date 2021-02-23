@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+header {
+    max-width: 100%;
+    height: 10vh;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    background-color: rgb(173, 177, 238);
+    ;
+}
+
+/* main */
+
+main {
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(255, 189, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    height: 100%;
+}
+
+.headline {
+    background-color: rgb(173, 177, 238);
+    max-width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+}
+
+.players {
+    max-width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.player, .computer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.scores {
+    max-width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.plr-score {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.comp-score {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgb(240, 165, 151);
+}
+
+.scores input {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: aliceblue;
+    margin-left: 10px;
+    font-size: 1.4rem;
+    border: solid 2px black;
+}
+
+.play-game {
+    max-width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.player-choices, .player-choice, .result, .computer-choices, .computer-choice {
+    width: 20%;
+    height: 100%;
+}
+
+.player-choices, .player-choice, .player, .plr-score {
+    background-color: blanchedalmond;
+    transition: all ease 0.3s;
+    
+}
+
+.computer-choices, .computer-choice, .computer {
+    background-color: rgb(240, 165, 151);
+    transition: all ease 0.3s;
+}
+
+.winer {
+    background-color: rgb(12, 172, 33);
+    transition: all ease 0.3s;
+}
+
+.loser {
+    background-color: rgb(235, 81, 61);
+    transition: all ease 0.3s;
+}
+.player-choices, .computer-choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-button, .computer-button {
+    padding: 0;
+    width: 150px;
+    height: 60px;
+    background-color: #32ad84;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23), 0 6px 6px rgba(0, 0, 0, 0.43), 0 4px 4px rgba(0, 0, 0, 0.63);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.computer-button {
+    cursor: none;
+    background-color: blueviolet;
+    color: white;
+}
+
+.selected {
+    background-color: rgb(39, 168, 219);
+}
+
+.player-button:hover {
+    background-color: rgb(224, 187, 64);
+    color: cornsilk;
+    font-size: 1.9rem;
+}
+
+.player-button:focus {
+    outline: none;
+    background-color: rgb(224, 187, 64);
+    color: cornsilk;
+}
+
+.computer-button:focus {
+    outline: none;
+}
+
+.player-choice, .computer-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.player-choice div, .result div, .computer-choice div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+}
+
+.player-choice p, .result p, .computer-choice p {
+    font-size: 1.8rem;
+}
+
+.play-game input {
+    padding: 0;
+    width: 80%;
+    height: 60px;
+    text-align: center;
+    color: black;
+    border: black 1px solid;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.final-result {
+    background-color: rgb(173, 177, 238);
+    max-width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-result p {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.final-result button {
+    padding: 0;
+    width: 150px;
+    height: 60px;
+    background-color: #f00d0d;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23), 0 6px 6px rgba(0, 0, 0, 0.43), 0 4px 4px rgba(0, 0, 0, 0.63);
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: white;
+}
+
+.final-result button:focus {
+    outline: none;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #32ad84;
+}
+
+footer div {
+    color: rgb(25, 8, 88);
+    margin: auto;
+    margin: 0.5rem;
+}
