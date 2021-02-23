@@ -46,12 +46,10 @@ playerChoices.forEach(function (item) {
             playerScore.value = pl;
             if (pl == 5) {
                 removeRelectedByComputer();
-                debugger;
                 const winer = "winer";
                 const loser = "loser";
                 addColors(playerSide,winer);
                 playerSide.forEach(element => {
-                    console.log(element);
                     element.classList.add('winer');
                 });
             
@@ -64,7 +62,6 @@ playerChoices.forEach(function (item) {
             comp++;
             computerScore.value = comp;
             if (comp == 5) {
-                debugger;
                 let add = [1,2,3];
                 add.forEach(element => {
                    console.log(element); 
