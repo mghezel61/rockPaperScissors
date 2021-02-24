@@ -89,7 +89,7 @@ playAgain.addEventListener('click', function () {
     pl = comp = playerScore.value = computerScore.value = 0;
     computerChoice.value = result.value = playerChoice.value = "??????"
     finalResult.textContent = " we are waiting for the final results!";
-    removeRelectedByComputer();
+    removeSelectedClassByComputer();
     removeColors(playerSide, "winer");
     removeColors(playerSide, "loser");
     removeColors(computerSide, "winer");
