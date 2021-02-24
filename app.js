@@ -6,6 +6,8 @@ const computerChoice = document.getElementById('computer');
 const result = document.getElementById('result');
 const playerScore = document.getElementById('player-score');
 const computerScore = document.getElementById('computer-score');
+const computerScoreSmallWidth = document.getElementById('computer-score-smallWidth');
+
 const playAgain = document.getElementById('play-again');
 const finalResult = document.querySelector('.f-r');
 // player
@@ -67,6 +69,7 @@ playerChoices.forEach(function (item) {
         if (res.search("lose") > 0) {
             comp++;
             computerScore.value = comp;
+            computerScoreSmallWidth.value = comp;
             if (comp == 5) {
                 let add = [1,2,3];
                 add.forEach(element => {
@@ -86,7 +89,7 @@ playerChoices.forEach(function (item) {
 // play again the game
 playAgain.addEventListener('click', function () {
     // reseting the all values
-    pl = comp = playerScore.value = computerScore.value = 0;
+    pl = comp = playerScore.value = computerScore.value =computerScoreSmallWidth.value= 0;
     computerChoice.value = result.value = playerChoice.value = "??????"
     finalResult.textContent = " we are waiting for the final results!";
     removeSelectedClassByComputer();
