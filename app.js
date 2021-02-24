@@ -22,22 +22,32 @@ let pl = 0;
 playerChoices.forEach(function (item) {
     item.addEventListener('click', function (e) {
         // remove the background-color of selected computer choice
-      removeRelectedByComputer();
+        removeSelectedClassByComputer();
+
+        // check if the game is finished
         if (pl == 5 || comp == 5) {
             return
         }
+
+        // replace the playerChoice with chosen one by player
         let player = e.currentTarget.textContent;
-        console.log(player);
         playerChoice.value = player;
+
+        // play the computer 
         let computer = computerPlay();
         computer = computer.toLowerCase();
+
+        // add the selected class as computer choice
         computerChoices.forEach(element => {
             if (element.classList.contains(computer)) {
                 element.classList.add('selected');
             }
         });
-        console.log(computer);
+
+        // replace the computerChoice with the chosen one by computer
         computerChoice.value = computer;
+
+        // play the game
         let res = playRound(player, computer);
         result.value = res;
 
@@ -45,17 +55,13 @@ playerChoices.forEach(function (item) {
             pl++;
             playerScore.value = pl;
             if (pl == 5) {
-                removeRelectedByComputer();
-                const winer = "winer";
-                const loser = "loser";
-                addColors(playerSide,winer);
-                playerSide.forEach(element => {
-                    element.classList.add('winer');
-                });
-            
-                addColors(computerSide,loser);
+                removeSelectedClassByComputer();
+                
+                // determine the winer and loser sides
+                addColors(playerSide,"winer");
+                addColors(computerSide,"loser");
                 finalResult.textContent = "you are the winner";
-                return "you are the winner";
+                return;
             }
         }
         if (res.search("lose") > 0) {
@@ -66,13 +72,12 @@ playerChoices.forEach(function (item) {
                 add.forEach(element => {
                    console.log(element); 
                 });
-                removeRelectedByComputer();
-                const winer = "winer";
-                const loser = "loser";
-                addColors(playerSide,loser)
-                addColors(computerSide,winer)
+                removeSelectedClassByComputer();
+                // determine the winer and loser sides
+                addColors(playerSide,"loser")
+                addColors(computerSide,"winer")
                 finalResult.textContent = "you are the loser";
-                return "you are the loser";
+                return;
             }
         }
     })
@@ -163,7 +168,7 @@ function game(number = 5) {
     }
 }
 // reset the the background color of computer buttons
-function removeRelectedByComputer() {
+function removeSelectedClassByComputer() {
     computerChoices.forEach(element => {
         if (element.classList.contains('selected')) {
             element.classList.remove('selected');
