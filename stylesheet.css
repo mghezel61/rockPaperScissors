@@ -32,6 +32,7 @@ main {
 }
 
 /* Container */
+
 .container {
     width: 80%;
     height: 100%;
@@ -118,7 +119,6 @@ main {
 .player-choices, .player-choice, .player, .plr-score {
     background-color: blanchedalmond;
     transition: all ease 0.3s;
-    
 }
 
 .computer-choices, .computer-choice, .computer {
@@ -135,6 +135,7 @@ main {
     background-color: rgb(235, 81, 61);
     transition: all ease 0.3s;
 }
+
 .player-choices, .computer-choices {
     display: flex;
     flex-direction: column;
@@ -148,7 +149,10 @@ main {
     height: 60px;
     background-color: #32ad84;
     border-radius: 20px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23), 0 6px 6px rgba(0, 0, 0, 0.43), 0 4px 4px rgba(0, 0, 0, 0.63);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19),
+                0 8px 8px rgba(0, 0, 0, 0.23),
+                0 6px 6px rgba(0, 0, 0, 0.43),
+                 0 4px 4px rgba(0, 0, 0, 0.63);
     transition: all 0.5s ease;
     cursor: pointer;
     font-weight: bold;
@@ -210,7 +214,7 @@ main {
 
 .play-game input {
     padding: 0;
-    width: 80%;
+    width: 90%;
     height: 60px;
     text-align: center;
     color: black;
@@ -231,7 +235,7 @@ main {
 }
 
 .final-result p {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     font-weight: bold;
 }
 
@@ -276,7 +280,6 @@ footer div {
 footer a {
     text-decoration: none;
 }
-
 
 /* responsive codes */
 @media (max-width: 950px) {
@@ -393,7 +396,7 @@ footer a {
 
     .final-result button {
         padding: 0;
-        width: 150px;
+        width: 120px;
         height: 40px;
         background-color: #f00d0d;
         border-radius: 20px;
@@ -405,10 +408,18 @@ footer a {
         margin: 10px 0;
         color: white;
     }
+
+    .selected {
+        background-color: rgb(39, 168, 219);
+    }
+    .final-result p{
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 /* smaller monitor */
-@media (max-width: 950px) {
+@media (max-width: 550px) {
     nav h1, .f-r{
         font-size: 1.3rem;
         transition: all ease 0.3s;
@@ -419,6 +430,53 @@ footer a {
         font-size: 1.1rem;
         text-align: center;
         transition: all ease 0.3s;
+    }
+    .player-button, .computer-button {
+        padding: 0;
+        width: 80px;
+        height: 40px;
+        background-color: #32ad84;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19),
+         0 8px 8px rgba(0, 0, 0, 0.23),
+          0 6px 6px rgba(0, 0, 0, 0.43),
+           0 4px 4px rgba(0, 0, 0, 0.63);
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 0px 10px;
+    }
+    
+    .computer-button {
+        cursor: none;
+        background-color: blueviolet;
+        color: white;
+    }
+
+    .player-button:hover {
+        background-color: rgb(224, 187, 64);
+        color: cornsilk;
+        font-size: 1.104rem;
+    }
+
+    .play-game input {
+        padding: 0;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        color: black;
+        border: black 1px solid;
+        border-radius: 20px;
+        font-size: 1.2rem;
+        margin:10px;
+    }
+    .selected {
+        background-color: rgb(39, 168, 219);
+    }
+    
+    .final-result p{
+        font-size: 1.1rem;
+        text-align: center;
     }
 
 }
