@@ -282,12 +282,47 @@ footer a {
     text-decoration: none;
 }
 
+.smallWidth {
+    display:none;
+}
+
 /* responsive codes */
 /* break point one */
 @media (max-width: 950px) {
+
+    .largeWidth {
+        display:none;
+    }
+
+    .smallWidth {
+        display:flex;
+    }
+
+    header, div.headline {
+        height:6vh;
+    }
+    main {
+        padding:0;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+    .container {
+        width: 80%;
+        height:90%;
+        margin: 0px;
+    }
+    
+    .scores input {
+        height: 40px;
+        width: 40px;
+        font-size: 1.2rem;
+        border: solid 1px black;
+    }
     nav h1 {
         font-size: 1.8rem;
         transition: all ease 0.3s;
+        margin:0;
     }
     .headline h1 {
         font-size: 1.4rem;
