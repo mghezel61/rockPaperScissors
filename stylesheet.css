@@ -46,6 +46,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
+    text-align: center;
 }
 
 .players {
@@ -282,6 +283,7 @@ footer a {
 }
 
 /* responsive codes */
+/* break point one */
 @media (max-width: 950px) {
     nav h1 {
         font-size: 1.8rem;
@@ -290,6 +292,7 @@ footer a {
     .headline h1 {
         font-size: 1.4rem;
         transition: all ease 0.3s;
+        text-align: center;
     }
 
     .players{
