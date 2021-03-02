@@ -147,7 +147,7 @@ main {
 .player-button, .computer-button {
     padding: 0;
     width: 130px;
-    height: 55px;
+    height: 50px;
     background-color: #32ad84;
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19),
@@ -215,8 +215,8 @@ main {
 
 .play-game input {
     padding: 0;
-    width: 90%;
-    height: 60px;
+    width: 80%;
+    height: 50px;
     text-align: center;
     color: black;
     border: black 1px solid;
@@ -242,8 +242,8 @@ main {
 
 .final-result button {
     padding: 0;
-    width: 150px;
-    height: 60px;
+    width: 130px;
+    height: 50px;
     background-color: #f00d0d;
     border-radius: 20px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 8px 8px rgba(0, 0, 0, 0.23), 0 6px 6px rgba(0, 0, 0, 0.43), 0 4px 4px rgba(0, 0, 0, 0.63);
